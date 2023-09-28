@@ -2,7 +2,7 @@ import React from 'react';
 
 
 function Header () {
-    return <h1 style={{color: 'grey'}}>My tasks</h1>
+    return <h1>My tasks</h1>
 };
 
 

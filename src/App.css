@@ -1,1 +1,11 @@
+body {
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+}
 
+
+/* list item */
+.todo {
+    margin: 0 600px;
+}

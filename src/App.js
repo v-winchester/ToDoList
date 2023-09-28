@@ -1,5 +1,6 @@
-import React from 'react';
 import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 import Button from './components/Button';
 import Header from './components/Header';
 import Form from "./components/Form";
@@ -8,7 +9,7 @@ import Form from "./components/Form";
 
 function App() {
   return (
-    <div style={{textAlign: 'center', fontFamily: "Times-New-Roman"}}>
+    <div style={{textAlign:"center", fontFamily: "times-new-roman"}}>
     <Header />
     <div>
     <Button />

@@ -1,58 +1,58 @@
 import React, { useState }from 'react';
 import Form from 'react-bootstrap/Form';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
-function FormText() {
+function Task() {
 
   const addTodo = () => {
-    setTodos([...todos, todo]);
+        setTodos([...todos, todo]);
   };
 
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
+  
 
   const deleteToDo = (Text) => {
-    const newTodos = todos.filter((todo) => {
-      return todo !== Text;
-    });
-    setTodos(newTodos);
-  };
+  const newTodos = todos.filter((todo) => {
+    
+  return todo !== Text;});
+         setTodos(newTodos);};
 
-    return (
+
+  return (
       <>
         <Form.Control
           type="text"
-          name="toDo"
-          aria-describedby="Task"
+          className='input'
+          name="input"
           placeholder="add task"
           value={todo}
           onChange={(event) => {
             setTodo(event.target.value);
           }}
-          />
-        <button className="add-button" onClick={addTodo}>Add</button>
+          /> <button className="add-button" onClick={addTodo}>Add</button>
 
-        {todos?.length > 0 ? (
-        <ul className='todo-list'>
+        
+        <ListGroup className='todo-list'>
         {todos.map((todo, index) => (
-        <div className='todo'>
-        <li key={index}> {todo} </li>
+          
+        <div className='todo' >
+        <ListGroup.Item key={index}> {todo} </ListGroup.Item>
 
         <button className='delete-button'
         onClick={() => {deleteToDo(todo);
-        }}>Delete</button>
+        }}>
+        Delete
+        </button>
         </div>
         ))}
 
-        </ul>
-        ) : (
-          <div className='empty'>
-            <p>No task found</p>
-          </div>
-        )}
+        </ListGroup>
+       
       </>
     );
     }
 
 
-  export default FormText;
+  export default Task;
